@@ -13,10 +13,14 @@ function SearchBar(){
 
 function BookCatalog(){
     return(
+        <div className="book-catalog">
+        <h2>Katalog knjiga</h2>
+        <SearchBar />
         <div className="book-grid">
             {getBooks().map((book) => (
                 <Bookcard key={book.id} book={book} />
             ))}
+        </div>
         </div>
     );
 }

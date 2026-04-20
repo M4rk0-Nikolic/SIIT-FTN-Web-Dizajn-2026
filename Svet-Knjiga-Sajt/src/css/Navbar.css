@@ -1,4 +1,33 @@
 nav {
-    display: absolute;
-    height: 0;
+    height: 7.5vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex: 1 1 0;
+}
+
+li {
+    flex: 1 1 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-links{
+    display: flex;
+    flex-direction: row;
+}
+
+.site-name {
+    font-size: 1.75rem;
+    font-weight: 600;
+    padding-left: 5rem;
+    flex: 1, 1, 0;
 }

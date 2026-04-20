@@ -4,10 +4,14 @@
   border-radius: 10px;
   border-color: black;
   color: rgb(0, 0, 0);
-  font-size: clamp(0.9rem, 1vw, 1.1rem);
   width: var(--card-width);
   overflow: hidden;
 }
+
+.book-card a {
+  text-decoration: none;
+}
+
 .book-card img {
   border-radius: 10px 10px 0px 0px;
   width: 100%;
