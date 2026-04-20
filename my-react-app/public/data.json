@@ -1,0 +1,226 @@
+{
+  "users": [
+    {
+      "id": "u1",
+      "username": "marko123",
+      "password": "pass123",
+      "firstName": "Marko",
+      "lastName": "Petrovic",
+      "email": "marko@example.com",
+      "birthDate": "2000-05-14",
+      "address": "Novi Sad, Serbia",
+      "occupation": "Student"
+    },
+    {
+      "id": "u2",
+      "username": "ana99",
+      "password": "pass456",
+      "firstName": "Ana",
+      "lastName": "Jovanovic",
+      "email": "ana@example.com",
+      "birthDate": "1999-11-02",
+      "address": "Belgrade, Serbia",
+      "occupation": "Designer"
+    }
+  ],
+
+  "authors": [
+    {
+      "id": "a1",
+      "firstName": "Isak",
+      "lastName": "Asimov",
+      "biography": "Famous science fiction writer and professor of biochemistry.",
+      "images": ["https://example.com/asimov1.jpg"],
+      "birthDate": "1920-01-02",
+      "status": "Преминуо",
+      "awards": 5,
+      "soldCopies": 5000000,
+      "managerPhone": "+381 64 123-4567"
+    },
+    {
+      "id": "a2",
+      "firstName": "George",
+      "lastName": "Orwell",
+      "biography": "English novelist, essayist, and critic.",
+      "images": ["https://example.com/orwell.jpg"],
+      "birthDate": "1903-06-25",
+      "status": "Преминуо",
+      "awards": 3,
+      "soldCopies": 8000000,
+      "managerPhone": "+381 64 987-6543"
+    },
+    {
+      "id": "a3",
+      "firstName": "J.K.",
+      "lastName": "Rowling",
+      "biography": "British author, best known for Harry Potter series.",
+      "images": ["https://example.com/rowling.jpg"],
+      "birthDate": "1965-07-31",
+      "status": "Активан",
+      "awards": 10,
+      "soldCopies": 120000000,
+      "managerPhone": "+381 63 222-3344"
+    },
+
+    {
+      "id": "a4",
+      "firstName": "Frank",
+      "lastName": "Herbert",
+      "biography": "American science fiction author, best known for Dune.",
+      "images": ["https://example.com/herbert.jpg"],
+      "birthDate": "1920-10-08",
+      "status": "Преминуо",
+      "awards": 4,
+      "soldCopies": 20000000,
+      "managerPhone": "+381 64 555-1111"
+    },
+    {
+      "id": "a5",
+      "firstName": "Isaac",
+      "lastName": "Newton",
+      "biography": "Fictionalized historical scientist used for educational books.",
+      "images": ["https://example.com/newton.jpg"],
+      "birthDate": "1643-01-04",
+      "status": "Преминуо",
+      "awards": 2,
+      "soldCopies": 1500000,
+      "managerPhone": "+381 64 777-2222"
+    }
+  ],
+
+  "books": [
+    {
+      "id": "b1",
+      "title": "Foundation",
+      "description": "A science fiction novel about the fall of a galactic empire.",
+      "images": ["https://example.com/foundation.jpg"],
+      "genre": "Sci-Fi",
+      "format": "Paperback",
+      "price": 12.99,
+      "pages": 255,
+      "authorId": "a1",
+      "isbn": "978-86-7543-123-4"
+    },
+    {
+      "id": "b2",
+      "title": "1984",
+      "description": "Dystopian novel about totalitarian regime.",
+      "images": ["https://example.com/1984.jpg"],
+      "genre": "Dystopian",
+      "format": "Hardcover",
+      "price": 15.5,
+      "pages": 328,
+      "authorId": "a2",
+      "isbn": "9788675431234"
+    },
+    {
+      "id": "b3",
+      "title": "Animal Farm",
+      "description": "Allegorical novella reflecting events leading up to the Russian Revolution.",
+      "images": ["https://example.com/animalfarm.jpg"],
+      "genre": "Political Satire",
+      "format": "Paperback",
+      "price": 9.99,
+      "pages": 112,
+      "authorId": "a2",
+      "isbn": "978-0-452-28424-1"
+    },
+    {
+      "id": "b4",
+      "title": "Harry Potter and the Philosopher's Stone",
+      "description": "A young wizard discovers his magical heritage.",
+      "images": ["https://example.com/hp1.jpg"],
+      "genre": "Fantasy",
+      "format": "Hardcover",
+      "price": 19.99,
+      "pages": 309,
+      "authorId": "a3",
+      "isbn": "978-0-7475-3269-9"
+    },
+
+    {
+      "id": "b5",
+      "title": "Dune",
+      "description": "Epic science fiction saga about politics and survival on desert planet Arrakis.",
+      "images": ["https://example.com/dune.jpg"],
+      "genre": "Sci-Fi",
+      "format": "Hardcover",
+      "price": 18.5,
+      "pages": 412,
+      "authorId": "a4",
+      "isbn": "978-0-441-17271-9"
+    },
+    {
+      "id": "b6",
+      "title": "Dune Messiah",
+      "description": "Continuation of Paul Atreides’ story.",
+      "images": ["https://example.com/dunemessiah.jpg"],
+      "genre": "Sci-Fi",
+      "format": "Paperback",
+      "price": 14.0,
+      "pages": 256,
+      "authorId": "a4",
+      "isbn": "978-0-441-17269-6"
+    },
+    {
+      "id": "b7",
+      "title": "Principles of Motion",
+      "description": "Educational physics book inspired by Newtonian mechanics.",
+      "images": ["https://example.com/newtonbook.jpg"],
+      "genre": "Education",
+      "format": "Paperback",
+      "price": 11.25,
+      "pages": 198,
+      "authorId": "a5",
+      "isbn": "978-1-234-56789-0"
+    }
+  ],
+
+  "reviews": [
+    {
+      "id": "r1",
+      "text": "Amazing world-building and storytelling!",
+      "date": "2026-04-10",
+      "bookId": "b1",
+      "userId": "u1"
+    },
+    {
+      "id": "r2",
+      "text": "Very dark but extremely relevant.",
+      "date": "2026-04-11",
+      "bookId": "b2",
+      "userId": "u2"
+    },
+    {
+      "id": "r3",
+      "text": "Simple but powerful message.",
+      "date": "2026-04-12",
+      "bookId": "b3",
+      "userId": "u1"
+    }
+  ],
+
+  "ratings": [
+    {
+      "id": "ra1",
+      "value": 5,
+      "date": "2026-04-10",
+      "authorId": "a1",
+      "userId": "u1"
+    },
+    {
+      "id": "ra2",
+      "value": 4,
+      "date": "2026-04-11",
+      "authorId": "a2",
+      "userId": "u1"
+    },
+    {
+      "id": "ra3",
+      "value": 5,
+      "date": "2026-04-12",
+      "authorId": "a3",
+      "userId": "u2"
+    }
+  ]
+}

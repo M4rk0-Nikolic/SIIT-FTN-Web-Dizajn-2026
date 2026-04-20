@@ -1,0 +1,55 @@
+.book-card {
+  background-color: rgb(228, 228, 228);
+  border-radius: 10px;
+  border-color: black;
+  color: rgb(0, 0, 0);
+}
+.book-card img {
+  border-radius: 10px 10px 0px 0px;
+  min-width: 110px;
+  min-height: 150px;
+  width: clamp(110px, 22vw, 180px);
+  height: clamp(150px, 30vw, 260px);
+}
+
+.book-card-info {
+  padding: 0em 0.5em;
+}
+
+.book-card-info h4 {
+  font-size: 1.1rem;
+  margin: 1em 0 0.5em 0;
+}
+
+.hero-right .book-card {
+  transition: transform 0.5s ease;
+  position: absolute;
+}
+.hero-book-card1 {
+  transform: translateY(0px) translateX(-180px) rotate(10deg);
+  z-index: 1;
+}
+.hero-book-card2 {
+  transform: translateY(-15px) translateX(180px) rotate(20deg);
+  z-index: 2;
+}
+.hero-book-card3 {
+  transform: translateY(-4px) translateX(0px) rotate(-10deg);
+  z-index: 3;
+}
+
+.hero-book-card1:hover {
+  transform: translateX(-240px) rotate(0deg);
+}
+.hero-book-card2:hover {
+  transform: translateX(240px);
+}
+.hero-book-card3:hover {
+  transform: rotate(0deg);
+}
+.hero-right:has(.hero-book-card3:hover) .hero-book-card1 {
+  transform: translateX(-240px) rotate(10deg);
+}
+.hero-right:has(.hero-book-card3:hover) .hero-book-card2 {
+  transform: translateX(240px) rotate(20deg);
+}
