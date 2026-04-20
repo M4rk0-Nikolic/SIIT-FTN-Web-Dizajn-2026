@@ -4,11 +4,11 @@ function Bookcard({ className = "", book }) {
     return (
         <div className={`book-card ${className}`}>
             <a href="">
-            <img src={book.image} alt={book.title} />
+            <img src={book.images[0]} alt={book.title} />
             </a>
             <div className="book-card-info">
                 <h4>{book.title}</h4>
-                <a><p>{book.author}</p></a>
+                <a><p>{`${book.firstName} ${book.lastName}`}</p></a>
             </div>
         </div>
     );

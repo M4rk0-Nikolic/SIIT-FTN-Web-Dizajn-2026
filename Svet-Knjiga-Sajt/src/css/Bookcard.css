@@ -1,15 +1,19 @@
 .book-card {
+  --card-width: clamp(110px, 12vw, 180px);
   background-color: rgb(228, 228, 228);
   border-radius: 10px;
   border-color: black;
   color: rgb(0, 0, 0);
+  font-size: clamp(0.9rem, 1vw, 1.1rem);
+  width: var(--card-width);
+  overflow: hidden;
 }
 .book-card img {
   border-radius: 10px 10px 0px 0px;
-  min-width: 110px;
+  width: 100%;
   min-height: 150px;
-  width: clamp(110px, 22vw, 180px);
-  height: clamp(150px, 30vw, 260px);
+  height: clamp(150px, 18vw, 260px);
+  display: block;
 }
 
 .book-card-info {
@@ -17,8 +21,11 @@
 }
 
 .book-card-info h4 {
-  font-size: 1.1rem;
   margin: 1em 0 0.5em 0;
+}
+
+.book-card-info p {
+  color: grey;
 }
 
 .hero-right .book-card {

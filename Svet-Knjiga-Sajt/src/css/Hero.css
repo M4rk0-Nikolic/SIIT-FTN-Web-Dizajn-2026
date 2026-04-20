@@ -50,9 +50,17 @@
     flex-direction: column;
     padding: 3rem 1.2rem;
   }
-
   .hero-right {
     width: 100%;
     min-height: 360px;
+  }
+  .hero-left {
+    text-align: center;
+    max-height: 15vh;
+    margin-top: 5rem;
+  }
+  .hero-bottom {
+    text-align: center;
+    margin-inline: auto;
   }
 }
