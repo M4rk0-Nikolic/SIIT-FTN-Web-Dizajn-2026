@@ -1,16 +1,35 @@
 .book-catalog h2{
     font-size: clamp(2.3rem, 5vw, 4.4rem);
     text-align: center;
+    
 }
 
 .search-bar {
+    height: 15vh;
+    width: 100%;
     display: flex;
+    border-color: black;
+    border-width: 1px;
     justify-content: center;
     margin: 2rem 0;
+    margin-bottom: 4rem;
+    align-items: center;
 }
 
+.search-bar input {
+    width: 40%;
+    height: 50%;
+    text-align: center;
+    border-radius: 100px;
+    font-size: 1.25rem;
+}
 
 .book-grid {
     display: grid;
+    margin-inline: 2rem;
+    margin-bottom: 18rem;
+    justify-items: center;
+    row-gap: 2rem;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(375px, 1fr));
 }

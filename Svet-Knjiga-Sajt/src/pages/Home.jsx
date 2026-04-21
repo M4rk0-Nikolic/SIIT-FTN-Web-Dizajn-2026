@@ -3,6 +3,7 @@ import "../css/Downarrow.css"
 import arrow from "../assets/down-arrow.svg"
 import BookCatalog from "../components/Bookcatalog.jsx";
 import Navbar from "../components/Navbar.jsx";
+import Footer from "../components/Footer.jsx";
 
 export function Home() {
   return (
@@ -13,6 +14,7 @@ export function Home() {
         <img width="50" height="50" src={arrow}/>
       </div>
       <BookCatalog />
+      <Footer />
     </>
   );
 }

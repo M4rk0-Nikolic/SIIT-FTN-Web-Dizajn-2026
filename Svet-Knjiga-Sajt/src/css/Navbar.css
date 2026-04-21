@@ -1,33 +1,49 @@
-nav {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.nav-bar {
     height: 7.5vh;
     width: 100%;
     display: flex;
     align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: 'Montserrat', sans-serif;
+}
+.nav-bar img {
+    padding-right: 3rem;
 }
 
-nav ul {
+.nav-bar ul {
     list-style: none;
     display: flex;
     flex: 1 1 0;
+    text-align: center;
 }
 
-li {
+.nav-links li {
     flex: 1 1 0;
+    font-size: clamp(0.9rem, 2vw, 1.5rem);
 }
 
-nav a {
+a {
     text-decoration: none;
     color: black;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover{
+    color: red;
 }
 
 .nav-links{
     display: flex;
     flex-direction: row;
+
 }
 
 .site-name {
     font-size: 1.75rem;
     font-weight: 600;
-    padding-left: 5rem;
-    flex: 1, 1, 0;
+    padding-left: clamp(0.5rem, 2vw, 1.5rem);
+    display: inline-block;
 }

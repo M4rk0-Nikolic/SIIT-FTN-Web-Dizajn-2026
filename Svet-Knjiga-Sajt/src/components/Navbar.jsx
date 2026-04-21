@@ -1,14 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"; //For moving to different pages
+import { HashLink } from "react-router-hash-link"; // For mocing to partes of page using (hash) id 
 import "../css/Navbar.css";
+import profile from "../assets/profile.svg";
 
-function Navbar({
-	links = [
-		{ to: "/", label: "Pocetna" },
-		{ to: "/catalog", label: "Katalog" },
-		{ to: "/authors", label: "Autori" },
-        { to: "/profile", label: "Profil" },
-	]
-}) {
+function Navbar() {
 	return (
 		<nav className="nav-bar" aria-label="Glavna navigacija">
 			<div className="site-name">
@@ -16,12 +11,18 @@ function Navbar({
 			</div>
 
 			<ul className="nav-links">
-				{links.map((item) => (
-					<li key={item.to}>
-						<Link to={item.to}>{item.label}</Link>
+					<li>
+						<HashLink to="/#book-catalog">Katalog knjiga</HashLink>
 					</li>
-				))}
-			</ul>
+                    <li>
+						<Link to="/">Katalog autora</Link>
+					</li>
+                    <li>
+                        <Link to="/">Administrator</Link>
+                    </li>
+            </ul>
+
+            <img src={profile} height= "50" width = "50" alt="Profil"/>
 		</nav>
 	);
 }

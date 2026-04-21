@@ -15,7 +15,7 @@ export function getBooksWithAuthors(){
     for ( let i = 0; i < data.books.length; i++ ){
         for ( let j = 0; j < data.authors.length; j++ ){
             if (data.books[i].authorId === data.authors[j].id){
-                allbooksandauthors.push({...data.books[i], ...data.authors[j]})
+                allbooksandauthors.push({...data.books[i], firstName: data.authors[j].firstName, lastName: data.authors[j].lastName});
             }
         }
     }
