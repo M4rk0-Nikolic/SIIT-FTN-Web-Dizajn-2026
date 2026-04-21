@@ -20,7 +20,12 @@ function Footer() {
                 <p className="copyright">2026 - FTN <br /> Softversko Inzenjerstvo i informacione tehnologije</p>
                 <div className="link-tree">
                     <Link to="/" onClick={() => window.scrollTo(0, 0)}>Svet Knjiga</Link>
+                    <span> | </span>
                     <HashLink to="/#book-catalog">Katalog knjiga</HashLink>
+                    <span> | </span>
+                    <Link to="/" >Katalog Autora</Link>
+                    <span> | </span>
+                    <Link to="/" >Administator</Link>
                 </div>
             </div>
         </footer>

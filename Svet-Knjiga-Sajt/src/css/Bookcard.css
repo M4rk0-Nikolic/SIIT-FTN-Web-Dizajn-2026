@@ -1,22 +1,27 @@
 .book-card {
-  --card-width: clamp(110px, 12vw, 180px);
   background-color: rgb(228, 228, 228);
   border-radius: 10px;
   border-color: black;
   color: rgb(0, 0, 0);
-  width: var(--card-width);
+  width: 183px;
   overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 2px 6px 13px 0px rgba(0, 0, 0, 0.2);
 }
 
 .book-card a {
   text-decoration: none;
 }
 
+.book-card:hover {
+  transform: scale(1.2);
+}
+
 .book-card img {
   border-radius: 10px 10px 0px 0px;
   width: 100%;
   min-height: 150px;
-  height: clamp(150px, 18vw, 260px);
+  height: 260px;
   display: block;
 }
 
@@ -50,13 +55,13 @@
 }
 
 .hero-book-card1:hover {
-  transform: translateX(-240px) rotate(0deg);
+  transform: translateX(-240px) rotate(0deg) scale(1.2);
 }
 .hero-book-card2:hover {
-  transform: translateX(240px);
+  transform: translateX(240px) scale(1.2);
 }
 .hero-book-card3:hover {
-  transform: rotate(0deg);
+  transform: rotate(0deg) scale(1.2);
 }
 .hero-right:has(.hero-book-card3:hover) .hero-book-card1 {
   transform: translateX(-240px) rotate(10deg);

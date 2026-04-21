@@ -22,3 +22,6 @@ export function getBooksWithAuthors(){
     return allbooksandauthors;
 }
 
+export function getReviews(){
+    return data.reviews;
+}
