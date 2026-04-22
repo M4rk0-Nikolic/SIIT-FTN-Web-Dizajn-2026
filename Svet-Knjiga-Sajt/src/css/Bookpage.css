@@ -1,0 +1,83 @@
+.book-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    margin-block: 8rem;
+    gap: 3rem;
+    
+    --radius: 20px;
+    --shadow: 4px 8px 28px 1px rgba(0, 0, 0, 0.25);
+    --shadow2: 4px 8px 28px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* --------------------------------LEFT PART-------------------------------- */
+
+.book-page h4{
+    font-size: 0.8rem;
+}
+
+.left-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.left-sidebar img {
+    width: 400px;
+    height: 600px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.book-author-price-format {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background-color: white;
+    padding: 1rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow2);
+}
+
+/* --------------------------------RIGHT PART-------------------------------- */
+
+.right-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 40vw;
+}
+
+.main-book-info {
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow2);
+    background-color: white;
+}
+
+.book-additional-info {
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow2);
+    background-color: white;
+}
+
+.book-additional-info .grid-item {
+    padding: 1rem; 
+}
+
+.book-reviews-and-ratings {
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow2);
+    background-color: white;
+}
+

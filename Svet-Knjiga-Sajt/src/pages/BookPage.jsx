@@ -1,30 +1,99 @@
 import { useParams } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { getBooks } from "../services/api.js";
-import "../css/BookPage.css";
+import { getBooks, getBooksWithAuthors, getReviews } from "../services/api.js";
+import "../css/Bookpage.css";
 
 function BookPage() {
   const { id } = useParams();
 
-  const book = getBooks()
+  let book;
+  let reviews_and_ratings = [];
 
-  return (
-    <>
-      <Navbar />
-      <div className="book-page">
-        <aside className="left-sidebar">
-          <img
-            src={`https://picsum.photos/400/600?random=${id}`}
-            alt="Book Cover"
-          />
-          <h3>{book.title}</h3>
-          <p>{book.description}</p>
-        </aside>
-      </div>
-      <Footer />
-    </>
-  );
+  for (let i = 0; i < getBooksWithAuthors().length; i++) {
+    if (getBooksWithAuthors()[i].id === id) {
+      book = getBooksWithAuthors()[i];
+      break;
+    }
+  }
+
+  for (let i = 0; i < getReviews().length; i++) {
+    if (getReviews()[i].bookId === id) {
+      reviews_and_ratings.push(getReviews()[i]);
+    }
+  }
+
+  //need another loop for the ratings, will implement later
+
+  if (book === undefined) {
+    return (
+      <>
+        <Navbar />
+        <style>{`
+          .book-page {
+            display: flex;
+            justify-content: center;
+            margin-block: 25vh;
+            border: 1px solid grey;
+            border-radius: 20px;
+            box-shadow: 3px 10px 20px 2px rgba(0, 0, 0, 0.3);
+            margin-inline: 35vw;
+            padding-block: 5vh;
+          }
+        `}</style>
+        <div className="book-page">
+          <h2>Nepronadjena knjiga</h2>
+        </div>
+        <Footer />
+      </>
+    );
+  } else {
+    return (
+      <>
+        <Navbar />
+        <div className="book-page">
+          <aside className="left-sidebar">
+            <img src={book.images[0]} alt="Book Cover"/>
+            <div className="book-author-price-format">
+              <h4>Autor</h4>
+              <h3>
+                {book.firstName} {book.lastName}
+              </h3>
+              <h4>Cena</h4>
+              <h3>{book.price} EUR</h3>
+              <p>{book.format}</p>
+            </div>
+          </aside>
+          <aside className="right-sidebar">
+            <div className="main-book-info">
+              <p className="book-genre">{book.genre}</p>
+              <h1 className="book-title">{book.title}</h1>
+              <p className="book-description">{book.description}</p>
+            </div>
+            <div className="book-additional-info">
+              <div className="grid-item"><h4>ISBN</h4><p>{book.isbn}</p></div>
+              <div className="grid-item"><h4>BROJ STRANA</h4><p>{book.pages}</p></div>
+              <div className="grid-item"><h4>ZANR</h4><p>{book.genre}</p></div>
+              <div className="grid-item"><h4>FORMAT</h4><p>{book.format}</p></div>
+            </div>
+            <div className="book-reviews-and-ratings">
+              <h3>Komentari i recenzije</h3>
+              {reviews_and_ratings.length === 0 ? (
+                <p>Jos nema komentara za ovu knhigu</p>
+              ) : (
+                reviews_and_ratings.map((review_and_rating) => (
+                  <p>
+                    {review_and_rating.comment} - {review_and_rating.rating}/5
+                  </p>
+                ))
+              )}
+            </div>
+          </aside>
+        </div>
+        <Footer />
+      </>
+    );
+  }
 }
 
 export default BookPage;
