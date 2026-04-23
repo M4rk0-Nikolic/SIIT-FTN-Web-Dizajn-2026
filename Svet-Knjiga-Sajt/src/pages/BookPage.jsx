@@ -1,7 +1,7 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { getBooks, getBooksWithAuthors, getReviews } from "../services/api.js";
+import { getBooks, getBooksWithAuthors, getReviews, getAuthorByName } from "../services/api.js";
 import "../css/Bookpage.css";
 
 function BookPage() {
@@ -48,6 +48,9 @@ function BookPage() {
       </>
     );
   } else {
+    
+    const authorID = getAuthorByName(book.firstName, book.lastName).id;
+    
     return (
       <>
         <Navbar />
@@ -55,13 +58,13 @@ function BookPage() {
           <aside className="left-sidebar">
             <img src={book.images[0]} alt="Book Cover"/>
             <div className="book-author-price-format">
-              <h4>Autor</h4>
-              <h3>
+              <h4>AUTOR</h4>
+              <h3 className="author-name"><Link to={`/author/${authorID}`}>
                 {book.firstName} {book.lastName}
-              </h3>
-              <h4>Cena</h4>
-              <h3>{book.price} EUR</h3>
-              <p>{book.format}</p>
+              </Link></h3>
+              <h4>CENA</h4>
+              <h3 className="book-price">{book.price} EUR</h3>
+              <p>{book.format} izdanje</p>
             </div>
           </aside>
           <aside className="right-sidebar">
@@ -78,6 +81,7 @@ function BookPage() {
             </div>
             <div className="book-reviews-and-ratings">
               <h3>Komentari i recenzije</h3>
+              <div className="list-of-reviews-and-ratings">
               {reviews_and_ratings.length === 0 ? (
                 <p>Jos nema komentara za ovu knhigu</p>
               ) : (
@@ -87,6 +91,7 @@ function BookPage() {
                   </p>
                 ))
               )}
+              </div>
             </div>
           </aside>
         </div>

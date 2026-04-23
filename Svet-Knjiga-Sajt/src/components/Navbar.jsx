@@ -17,17 +17,20 @@ function Navbar() {
 
 			<ul className="nav-links">
 					<li>
-						<HashLink to="/#book-catalog">Katalog knjiga</HashLink>
+						<HashLink to="/#book-catalog" className="underline-eff">Katalog knjiga</HashLink>
 					</li>
                     <li>
-						<Link to="/">Katalog autora</Link>
+						<Link to="/authors" className="underline-eff">Katalog autora</Link>
 					</li>
                     <li>
-                        <Link to="/">Administrator</Link>
+                        <Link to="/" className="admin-link underline-eff">Administrator<Link to="/admin/books"><p className="firstp">Knjiga</p></Link><Link to="/admin/authors"><p className="secondp">Autora</p></Link></Link>
                     </li>
             </ul>
 			<div className="profile-button">
-            <img src={profile} height= "45" width = "45" alt="Profil"/>
+			<Link to="/profile">
+            	<img src={profile} height= "40" width = "40" alt="Profil"/>
+				{isLoggedIn() ? (<><p className="firstp">Moja aktivnost</p><p className="secondp">Odjava</p></>) : (<><p className="firstp">Prijava</p><p className="secondp">Registracija</p></>)}
+			</Link>
 			</div>
 		</nav>
 	);

@@ -47,3 +47,73 @@ a {
     padding-left: clamp(0.5rem, 2vw, 1.5rem);
     display: inline-block;
 }
+
+/* Navbar underline effect for all and admin drop down */
+.underline-eff {
+    position: relative;
+    border: 30px solid transparent;
+}
+
+.underline-eff::before {
+    content: "";
+    position: absolute;
+    background-color: red;
+    height: 2px;
+    width: 0;
+    border-radius: 10px;
+    top: 105%;
+    left: 50%;
+    transition: width 0.3s ease;
+    transform: translateX(-50%);
+    
+}
+
+.underline-eff:hover::before{
+    width: 100%;
+}
+
+.admin-link p{
+    position: absolute;
+    padding-block: 1rem;;
+    margin-block: 0;
+    display: block;
+    left: 0%;
+    top: 70%;
+    transition: all 0.3s ease;
+    font-size: 1.4rem;
+    opacity: 0;
+}
+
+.admin-link .secondp {
+    top: 220%;
+}
+
+.admin-link:hover p,
+.profile-button:hover p {
+    opacity: 1;
+    transform: translateY(20px);
+    color: red;
+}
+
+/* Profile button drop down*/
+
+.profile-button {
+    position: relative;
+}
+
+.profile-button p{
+    position: absolute;
+    padding-block: 1rem;;
+    margin-block: 0;
+    display: block;
+    right: 50%;
+    top: 70%;
+    transition: all 0.3s ease;
+    font-size: 1.4rem;
+    opacity: 0;
+}
+
+.profile-button .secondp {
+    top: 175%;
+}
+

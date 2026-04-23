@@ -12,6 +12,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/book/:id" element={<BookPage />} />
         <Route path="/author/:id" element={<p>Nista ovde</p>} />
+        <Route path="/authors" element={<p>Nista ovde</p>} />
+        <Route path="/admin/books" element={<p>Nista ovde</p>} />
+        <Route path="/admin/authors" element={<p>Nista ovde</p>} />
+        <Route path="/profile" element={<p>Nista ovde</p>} />
         <Route path="*" element={<p>Stranica ne pronadjena</p>} />
       </Routes>
     </LoggedInProvider>

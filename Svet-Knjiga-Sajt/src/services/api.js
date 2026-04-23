@@ -25,3 +25,12 @@ export function getBooksWithAuthors(){
 export function getReviews(){
     return data.reviews;
 }
+
+export function getAuthorByName(firstName, lastName){
+    for ( let i = 0; i < data.authors.length; i++ ){
+        if (data.authors[i].firstName === firstName && data.authors[i].lastName === lastName){
+            return data.authors[i];
+        }
+    }
+    return null;
+}
