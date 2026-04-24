@@ -1,0 +1,37 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-block: 15vh;
+    margin-inline: 30vw;
+}
+
+.login button {
+    background-color: rgb(205, 149, 217);
+    color: white;
+    height: 75px;
+    width: 60%;
+    border-radius: 30px;
+    border: none;
+    font-size: 1.5rem;
+    margin-block: 3rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login button:hover {
+    background-color: rgb(186, 77, 210);
+}
+
+.login .search-bar {
+    margin-block: 10px;
+}
+
+.login .search-input-wrap {
+    width: 32vw;
+}
+
+.login .search-bar input {
+    padding-right: 3.2rem;
+}

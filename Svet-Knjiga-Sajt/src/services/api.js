@@ -34,3 +34,16 @@ export function getAuthorByName(firstName, lastName){
     }
     return null;
 }
+
+export function getNumberOfBooksAuthors(){
+    return [Object.keys(data.books).length, Object.keys(data.authors).length];
+}
+
+export function checkLogin(username, password){
+    for (let i = 0; i < data.users.length; i++){
+        if (data.users[i].username === username && data.users[i].password === password){
+            return true;
+        }
+    }
+    return false;
+}

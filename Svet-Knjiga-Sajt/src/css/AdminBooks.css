@@ -1,0 +1,47 @@
+/* ------------------HEADER------------------ */
+.admin-header {
+    text-align: center;
+}
+
+.admin-header h2 {
+    font-size: 4.2em;
+    margin-bottom: 20px;
+}
+
+.admin-header p {
+    font-size: 1.5em;
+    color: #e22604;
+    font-weight: 800;
+}
+
+/* ------------------ADDING BOOKS------------------ */
+
+
+
+
+
+/* ------------------CATALOG------------------ */
+.admin .book-card {
+    position: relative;
+}
+
+.admin .book-card:hover {
+    transform: scale(1.1);
+}
+
+.admin .book-card::before {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-image: url("../assets/remove.svg");
+    background-size: cover;
+    position: absolute;
+    top: 25%;
+    right: 20%;
+    opacity: 0;
+    transition: all 0.2s ease;
+}
+.admin .book-card:hover::before {
+    opacity: 1;
+}

@@ -8,7 +8,7 @@ function BookPage() {
   const { id } = useParams();
 
   let book;
-  let reviews_and_ratings = [];
+  let reviews = [];
 
   for (let i = 0; i < getBooksWithAuthors().length; i++) {
     if (getBooksWithAuthors()[i].id === id) {
@@ -19,11 +19,9 @@ function BookPage() {
 
   for (let i = 0; i < getReviews().length; i++) {
     if (getReviews()[i].bookId === id) {
-      reviews_and_ratings.push(getReviews()[i]);
+      reviews.push(getReviews()[i]);
     }
   }
-
-  //need another loop for the ratings, will implement later
 
   if (book === undefined) {
     return (
@@ -79,15 +77,15 @@ function BookPage() {
               <div className="grid-item"><h4>ZANR</h4><p>{book.genre}</p></div>
               <div className="grid-item"><h4>FORMAT</h4><p>{book.format}</p></div>
             </div>
-            <div className="book-reviews-and-ratings">
+            <div className="book-reviews">
               <h3>Komentari i recenzije</h3>
-              <div className="list-of-reviews-and-ratings">
-              {reviews_and_ratings.length === 0 ? (
+              <div className="list-of-reviews">
+              {reviews.length === 0 ? (
                 <p>Jos nema komentara za ovu knhigu</p>
               ) : (
-                reviews_and_ratings.map((review_and_rating) => (
+                reviews.map((review) => (
                   <p>
-                    {review_and_rating.comment} - {review_and_rating.rating}/5
+                    {review.userId} - {review.text}
                   </p>
                 ))
               )}

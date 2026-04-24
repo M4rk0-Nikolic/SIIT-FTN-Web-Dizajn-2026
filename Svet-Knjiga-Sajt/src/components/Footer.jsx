@@ -25,7 +25,7 @@ function Footer() {
                     <span> | </span>
                     <Link to="/" >Katalog Autora</Link>
                     <span> | </span>
-                    <Link to="/" >Administator</Link>
+                    <Link to="/" onClick={() => window.scrollTo(0, 0)}>Administator</Link>
                 </div>
             </div>
         </footer>

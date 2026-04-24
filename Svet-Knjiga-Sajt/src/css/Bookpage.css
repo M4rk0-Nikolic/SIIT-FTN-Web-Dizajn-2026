@@ -96,7 +96,7 @@
     background: linear-gradient(135deg, white, rgb(245, 241, 241))
 }
 
-.book-reviews-and-ratings {
+.book-reviews {
     display: flex;
     padding: 1rem;
     flex-direction: column;

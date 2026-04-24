@@ -6,7 +6,7 @@ import { useState } from "react";
 import { useLoggedInContext } from "../contexts/Loggedin.jsx";
 
 function Navbar() {
-	const [isOpen, setIsOpen] = useState(false);
+	
 	const { loggedIn, setLoggedIn, isLoggedIn } = useLoggedInContext();
 
 	return (
@@ -23,14 +23,14 @@ function Navbar() {
 						<Link to="/authors" className="underline-eff">Katalog autora</Link>
 					</li>
                     <li>
-                        <Link to="/" className="admin-link underline-eff">Administrator<Link to="/admin/books"><p className="firstp">Knjiga</p></Link><Link to="/admin/authors"><p className="secondp">Autora</p></Link></Link>
+                        <a className="admin-link underline-eff">Administrator<Link to="/admin/books"><p className="firstp">Knjiga</p></Link><Link to="/admin/authors"><p className="secondp">Autora</p></Link></a>
                     </li>
             </ul>
 			<div className="profile-button">
 			<Link to="/profile">
             	<img src={profile} height= "40" width = "40" alt="Profil"/>
-				{isLoggedIn() ? (<><p className="firstp">Moja aktivnost</p><p className="secondp">Odjava</p></>) : (<><p className="firstp">Prijava</p><p className="secondp">Registracija</p></>)}
 			</Link>
+				{isLoggedIn() ? (<><Link to="/profile"><p className="firstp">Profil</p></Link><p className="secondp">Odjava</p></>) : (<><Link to="/profile/login"><p className="firstp">Prijava</p></Link><Link to="/register"><p className="secondp">Registracija</p></Link></>)}
 			</div>
 		</nav>
 	);

@@ -72,6 +72,10 @@ a {
     width: 100%;
 }
 
+.admin-link {
+    cursor: pointer;
+}
+
 .admin-link p{
     position: absolute;
     padding-block: 1rem;;
@@ -107,13 +111,20 @@ a {
     margin-block: 0;
     display: block;
     right: 50%;
-    top: 70%;
+    top: 50%;
     transition: all 0.3s ease;
     font-size: 1.4rem;
     opacity: 0;
 }
 
 .profile-button .secondp {
-    top: 175%;
+    top: 90%;
 }
+
+.profile-button img {
+    margin-bottom: 0;
+    position: relative;
+    border: 30px solid transparent;
+}
+
 
