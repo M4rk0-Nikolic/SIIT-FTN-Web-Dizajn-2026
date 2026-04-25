@@ -30,7 +30,7 @@ function Navbar() {
 			<Link to="/profile">
             	<img src={profile} height= "40" width = "40" alt="Profil"/>
 			</Link>
-				{isLoggedIn() ? (<><Link to="/profile"><p className="firstp">Profil</p></Link><p className="secondp">Odjava</p></>) : (<><Link to="/profile/login"><p className="firstp">Prijava</p></Link><Link to="/register"><p className="secondp">Registracija</p></Link></>)}
+				{isLoggedIn() ? (<><Link to="/profile"><p className="firstp">Profil</p></Link><p className="secondp">Odjava</p></>) : (<><Link to="/profile/login"><p className="firstp">Prijava</p></Link><Link to="/profile/register"><p className="secondp">Registracija</p></Link></>)}
 			</div>
 		</nav>
 	);
