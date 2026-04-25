@@ -22,6 +22,7 @@ function Login() {
     isLoggedIn() ? (<p>Vec ste prijavljeni</p>) : (
     <>
         <Navbar />
+        <h1 className="login-text">Prijava</h1>
         <div className="login">
         <SearchBar search={userName} setSearch={setUsername} icon={profileIcon} placeholder="Korisnicko ime"></SearchBar>
         <SearchBar search={passWord} setSearch={setPassword} icon={passwordIcon} placeholder="Lozinka"></SearchBar>

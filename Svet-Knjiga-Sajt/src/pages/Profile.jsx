@@ -1,14 +1,19 @@
 import { useLoggedInContext } from "../contexts/Loggedin";
 
 function Profile() {
-  const { isLoggedIn } = useLoggedInContext();
+  const { loggedIn, isLoggedIn } = useLoggedInContext();
 
   return (
     <>
-      isLoggedIn() ? (<>
-        <p>Ovo je profil</p>
+      {isLoggedIn() ? (<>
+
+      {Object.entries(loggedIn).map(([key, value]) => (
+        <p key={key}>{key}: {value}</p>
+      ))}
         </>) 
-      : (<p>Niste prijavljeni</p>)
+      : (<p>Niste prijavljeni</p>)}
     </>
   );
 }
+
+export default Profile;

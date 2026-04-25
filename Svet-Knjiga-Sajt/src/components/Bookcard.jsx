@@ -23,7 +23,7 @@ function Bookcard({ className_ = "", book, onClick }) {
   return (
     <div
       className={`book-card ${className_}`}
-      onClick={onClick}
+      onClick={() => onClick(book.id)}
       style={{ cursor: isClickable ? "pointer" : "default" }}
     >
       {isClickable ? (

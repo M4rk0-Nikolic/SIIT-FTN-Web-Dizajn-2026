@@ -47,3 +47,25 @@ export function checkLogin(username, password){
     }
     return false;
 }
+
+export function DB_addBook(book){
+    data.books.push(book);
+}
+
+export function DB_removeBook(bookId){
+    for (let i = 0; i < data.books.length; i++){
+        if (data.books[i].id === bookId){
+            data.books.splice(i, 1);
+            return true;
+        }
+    }
+}
+
+export function DB_updateBook(bookId, updatedBook){
+    for (let i = 0; i < data.books.length; i++){
+        if (data.books[i].id === bookId){
+            data.books[i] = {...data.books[i], ...updatedBook};
+            return true;
+        }
+    }
+}

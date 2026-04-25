@@ -4,8 +4,10 @@ import Footer from "../components/Footer";
 import { getBooks, getBooksWithAuthors, getReviews, getAuthorByName } from "../services/api.js";
 import "../css/Bookpage.css";
 
-function BookPage() {
-  const { id } = useParams();
+function BookPage(props) {
+  const params = useParams();
+
+  const id = props.id ?? params.id;
 
   let book;
   let reviews = [];

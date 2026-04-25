@@ -15,7 +15,7 @@ export function SearchBar({ search, setSearch , placeholder = "Potrazi knjigu po
     );
 }
 
-function BookCatalog( { onClick, } ) {
+function BookCatalog( { onClick } ) {
     const [search, setSearch] = useState("");
 
     function displayAllBooks() {

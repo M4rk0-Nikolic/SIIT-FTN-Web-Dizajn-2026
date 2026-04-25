@@ -6,6 +6,7 @@ import { LoggedInProvider } from "./contexts/Loggedin.jsx";
 import AdminBooks from "./pages/Adminbooks.jsx";
 import { useEffect } from "react";
 import LoginRegister from "./pages/Loginregister.jsx";
+import Profile from "./pages/Profile.jsx";
 
 
 function App() {
@@ -35,7 +36,7 @@ function App() {
         <Route path="/authors" element={<p>Nista ovde</p>} />
         <Route path="/admin/books" element={<AdminBooks />} />
         <Route path="/admin/authors" element={<p>Nista ovde</p>} />
-        <Route path="/profile" element={<p>Nista ovde</p>} />
+        <Route path="/profile" element={<Profile />} />
         <Route path="/profile/:type" element={<LoginRegister />} />
         <Route path="*" element={<p>Stranica ne pronadjena</p>} />
       </Routes>
