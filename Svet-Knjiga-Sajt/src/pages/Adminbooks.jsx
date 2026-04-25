@@ -52,7 +52,7 @@ function AdminBooks() {
         <Navbar />
         <div className="admin-header">
         <h2>Admin panela</h2>
-        <p>Dodavanjem Knjiga se radi ispod, a za brisanje se samo kilikitne na knjigu u katalogu i pojavice se njne podatke za izmenu ili brisanju</p>
+        <p>Dodavanjem Knjiga se radi ispod, a za brisanje/izmene se samo kilikitne na knjigu <br/> u katalogu i pojavice se njne podatke za izmenu ili brisanju</p>
         </div>
         <div className="add-book">
         <form key={selected.id ?? "new-book-form"} className="main-form">
@@ -64,6 +64,11 @@ function AdminBooks() {
         <div className="form-field">
         <label htmlFor="genre">Zanr knjige</label>
         <input id="genre" type="text" defaultValue={isSelected() ? selected.genre : "Fantastika"} />
+        </div>
+
+        <div className="form-field">
+        <label htmlFor="description">Opis knjige</label>
+        <input id="description" type="text" defaultValue={isSelected() ? selected.description : "Knjiga o interesantnim stvarima"} />
         </div>
 
         <div className="form-field">
@@ -88,7 +93,7 @@ function AdminBooks() {
 
         <div className="form-field">
         <label htmlFor="isbn">ISBN knjige</label>
-        <input id="isbn" type="number" defaultValue={isSelected() ? selected.isbn : 9781234567890} />
+        <input id="isbn" type="text" defaultValue={isSelected() ? selected.isbn : 9781234567890} />
         </div>
 
         <div className="form-field">
@@ -99,13 +104,13 @@ function AdminBooks() {
             ))}
         </select>
         </div>
-        <button type="submit">Dodaj Knjigu</button>
+        {isSelected() ? (<><button id="change-button" type="submit">Izmeni Knjigu</button><button id="delete-button" type="submit">Obrisi Knjigu</button></>) : (<button id="add-button" type="submit">Dodaj Knjigu</button>)}
         </form>
-        <div>
-        <p>Broj Knjiga<br/>{numBooks}</p>
+        <div className="Books">
+        <p>Broj Knjiga</p><p className = "admin-number">{numBooks}</p>
         </div>
-        <div>
-        <p>Broj Autora<br/>{numAuthors}</p>
+        <div className="Authors">
+        <p>Broj Autora</p><p className = "admin-number">{numAuthors}</p>
         </div>
         </div>
         <div className="admin">
